@@ -12,6 +12,7 @@ async function signup(req, res) {
     });
     return res.status(201).json("user registered");
   } catch (error) {
+    console.log("signup error =>", error);
     if (error.original.code === "23505")
       return res.status(404).json({
         status: 404,
