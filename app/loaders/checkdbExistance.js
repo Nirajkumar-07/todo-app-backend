@@ -2,11 +2,8 @@ const { Client } = require("pg");
 
 async function checkDBExistance() {
   const client = new Client({
-    host: "localhost",
-    user: "postgres",
-    database: "postgres",
-    port: 5432,
-    password: "neeraj",
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
   });
 
   await client.connect();
