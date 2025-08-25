@@ -10,7 +10,7 @@ async function getUser(req, res) {
     const { password, ...userData } = user.dataValues;
     if (user) {
       const imageUrl = user.dataValues.image
-        ? `${req.protocol}://${req.get("host")}/uploads/${
+        ? `${req.protocol}://${req.get("host")}/api/uploads/${
             user.dataValues.image
           }`
         : null;
