@@ -15,7 +15,7 @@ async function getTaskList(req, res) {
     return res.status(404).json({
       status: 404,
       success: false,
-      message: error.detail,
+      message: JSON.stringify(error),
     });
   }
 }
@@ -34,7 +34,7 @@ async function getTask(req, res) {
     return res.status(404).json({
       success: false,
       status: 404,
-      message: error,
+      message: JSON.stringify(error),
     });
   }
 }
@@ -52,7 +52,7 @@ async function getTodayTasks(req, res) {
     return res.status(404).json({
       success: false,
       status: 404,
-      message: error,
+      message: JSON.stringify(error),
     });
   }
 }
@@ -76,7 +76,7 @@ async function addTask(req, res) {
     return res.status(404).json({
       status: 404,
       success: false,
-      message: error.detail,
+      message: JSON.stringify(error),
     });
   }
 }
@@ -101,7 +101,7 @@ async function updateTask(req, res) {
     return res.status(404).json({
       status: 404,
       success: false,
-      message: error,
+      message: JSON.stringify(error),
     });
   }
 }
@@ -119,7 +119,7 @@ async function deleteTask(req, res) {
     return res.status(404).json({
       status: 404,
       success: false,
-      message: error,
+      message: JSON.stringify(error),
     });
   }
 }
@@ -138,7 +138,7 @@ async function updateTaskStatus(req, res) {
     return res.status(404).json({
       success: false,
       status: 404,
-      message: error,
+      message: JSON.stringify(error),
     });
   }
 }

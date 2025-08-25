@@ -24,6 +24,11 @@ const Users = sequelize.define(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: null,
+    },
     active: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

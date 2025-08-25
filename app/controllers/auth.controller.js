@@ -23,7 +23,7 @@ async function signup(req, res) {
       return res.status(404).json({
         status: 404,
         success: false,
-        message: error.original.detail,
+        message: JSON.stringify(error),
       });
     }
   }
@@ -70,7 +70,7 @@ async function signin(req, res) {
     return res.status(404).json({
       status: 404,
       success: false,
-      message: error,
+      message: JSON.stringify(error),
       user: null,
     });
   }

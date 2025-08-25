@@ -20,4 +20,14 @@ async function changePassword(userId, newPassword) {
   }
 }
 
-module.exports = { getUser, changePassword };
+async function imageUpload(userId, imageName) {
+  try {
+    const user = await Users.findByPk(userId);
+    const updateUserImage = await user.update({ image: imageName });
+    return updateUserImage;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+module.exports = { getUser, changePassword, imageUpload };

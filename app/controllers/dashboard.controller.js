@@ -31,7 +31,7 @@ async function getDashboardData(req, res) {
       success: false,
       status: 404,
       data: null,
-      message: error,
+      message: JSON.stringify(error),
     });
   }
 }
