@@ -20,3 +20,4 @@ Please be respectful and constructive. Treat all contributors with kindness and 
    ```bash
    git clone https://github.com/your-username/todo-app-backend.git
    cd todo-app-backend
+   npm install
