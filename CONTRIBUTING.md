@@ -3,7 +3,6 @@
 
 ## CONTRIBUTING.md
 
-```markdown
 # Contributing to Todo-App Backend
 
 Thanks for considering contributing! 🎉
