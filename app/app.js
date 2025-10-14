@@ -31,3 +31,8 @@ process.on("SIGINT", async () => {
   await sequelize.close();
   process.exit(0);
 });
+process.on("SIGTERM", async () => {
+  console.log("SIGTERM received. shutting down...");
+  await sequelize.close();
+  process.exit(0);
+});
